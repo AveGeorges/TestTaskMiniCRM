@@ -30,8 +30,9 @@ app.include_router(stats.router, prefix=settings.API_V1_PREFIX)
 @app.get("/")
 def root():
     """Корневой эндпоинт"""
-    docs_path = f"{settings.API_V1_PREFIX}/docs" if settings.API_V1_PREFIX else "/docs"
     return {
         "message": settings.APP_NAME + " API",
-        "docs": docs_path
+        "docs": "/docs",
+        "api_prefix": settings.API_V1_PREFIX if settings.API_V1_PREFIX else "нет префикса",
+        "api_endpoints": f"{settings.API_V1_PREFIX}/operators/" if settings.API_V1_PREFIX else "/operators/"
     }

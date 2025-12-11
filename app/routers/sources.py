@@ -4,7 +4,7 @@ from typing import List
 from app.database import get_db
 from app import models, schemas
 
-router = APIRouter(prefix="/sources", tags=["sources"])
+router = APIRouter(prefix="/sources", tags=["Источники"])
 
 
 @router.post("/", response_model=schemas.SourceResponse)

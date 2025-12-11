@@ -4,7 +4,7 @@ from typing import List
 from app.database import get_db
 from app import models, schemas
 
-router = APIRouter(prefix="/leads", tags=["leads"])
+router = APIRouter(prefix="/leads", tags=["Лиды"])
 
 
 @router.get("/", response_model=List[schemas.LeadResponse])

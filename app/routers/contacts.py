@@ -5,7 +5,7 @@ from app.database import get_db
 from app import models, schemas
 from app.services import DistributionService
 
-router = APIRouter(prefix="/contacts", tags=["contacts"])
+router = APIRouter(prefix="/contacts", tags=["Обращения"])
 
 
 @router.post("/", response_model=schemas.ContactResponse)

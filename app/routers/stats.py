@@ -4,7 +4,7 @@ from sqlalchemy import func
 from app.database import get_db
 from app import models, schemas
 
-router = APIRouter(prefix="/stats", tags=["stats"])
+router = APIRouter(prefix="/stats", tags=["Статистика"])
 
 
 @router.get("/contacts")
